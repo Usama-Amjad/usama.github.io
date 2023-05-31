@@ -3,6 +3,7 @@
 
 // module.exports = nextConfig
 
+
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 let assetPrefix = ""
