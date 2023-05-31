@@ -18,4 +18,12 @@ jobs:
       - name: Build
         run: |
           npm ci
+          npm run build
+          npm run export
+          touch out/.nojekyll
+          
       - name: Deploy
+        uses: JamesIves/github-pages-deploy-actions@4.4.0
+        with:
+          branch: gh-pages
+          folder: out
